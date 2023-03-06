@@ -1,0 +1,15 @@
+#developement database credentials
+**/dev.py
+
+# migration files besides the __init__
+
+**/migrations/**
+!*/migrations/__init__.py
+
+# python related files
+venv/
+__pycache__
+
+# wagtail generated folders
+/media/
+/static/
