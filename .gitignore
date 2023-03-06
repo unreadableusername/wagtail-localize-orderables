@@ -13,3 +13,6 @@ __pycache__
 # wagtail generated folders
 /media/
 /static/
+
+# database
+db.sqlite3
