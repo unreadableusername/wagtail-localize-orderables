@@ -8,7 +8,7 @@ from wagtail.models import TranslatableMixin
 
 
 @register_snippet
-class ContactPerson(index.Indexed, TranslatableMixin, models.Model):
+class ContactPersonModel(index.Indexed, TranslatableMixin, models.Model):
     first_name = models.CharField(max_length=255, blank=False, null=False)
     last_name = models.CharField(max_length=255, blank=False, null=False)
     image = models.ForeignKey(
