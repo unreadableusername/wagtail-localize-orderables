@@ -6,14 +6,14 @@
 {% block content %}
 
 <!-- display orderable on page -->
-{% for contact_person in page.contact_persons.all %}
+{% for orderable in page.contact_persons.all %}
     <div class="card" style="padding: 1rem; display: flex; gap: 1rem; align-items: center; background-color: blanchedalmond; margin-bottom: 2rem; width: 600px; border-radius: 15px;">
         <div class="image" style="border-radius: 25%;">
-            {% image contact_person.person.image fill-300x300 %}
+            {% image orderable.contact_person.image fill-300x300 %}
         </div>
         <div class="text">
-            <p>{{ contact_person.person.first_name }} {{ contact_person.person.last_name }}</p>
-            <p>{{ contact_person.person.further_information }}</p>
+            <p>{{ orderable.contact_person.first_name }} {{ orderable.contact_person.last_name }}</p>
+            <p>{{ orderable.contact_person.further_information }}</p>
         </div>
     </div>
 {% endfor %}
