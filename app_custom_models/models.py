@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.translation import gettext as _
 
 from wagtail.admin.panels import FieldPanel, FieldRowPanel
 from wagtail.snippets.models import register_snippet
@@ -47,5 +48,5 @@ class ContactPersonModel(index.Indexed, TranslatableMixin, models.Model):
         return self.first_name + " " + self.last_name
 
     class Meta(TranslatableMixin.Meta):     # noqa
-        verbose_name = "Ansprechperson"
-        verbose_name_plural = "Anprechpersonen"
+        verbose_name = _("Contact person")
+        verbose_name_plural = _("Contact persons")
